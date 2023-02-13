@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BarnNamn" representedClassName="BarnNamn" syncable="YES" codeGenerationType="class">
+        <attribute name="firstname" optional="YES" attributeType="String"/>
+        <attribute name="lastmoney" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="pengar" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="weekmessage" optional="YES" attributeType="String"/>
+        <attribute name="weekmoney" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="transactrelationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BarnTransaktion" inverseName="barnrelationship" inverseEntity="BarnTransaktion"/>
+    </entity>
+    <entity name="BarnTransaktion" representedClassName="BarnTransaktion" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="message" optional="YES" attributeType="String"/>
+        <relationship name="barnrelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BarnNamn" inverseName="transactrelationship" inverseEntity="BarnNamn"/>
+    </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
-    <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-    </elements>
 </model>
