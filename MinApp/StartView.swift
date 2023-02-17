@@ -22,7 +22,6 @@ struct StartView: View {
                 Spacer().frame(width:30)
                 
             }
-          
         }
     }
 }

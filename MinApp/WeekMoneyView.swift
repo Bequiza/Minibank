@@ -21,6 +21,7 @@ struct WeekMoneyView: View {
     
     var body: some View {
         NavigationView {
+            
             ZStack {
                 
                 VStack {
@@ -32,7 +33,6 @@ struct WeekMoneyView: View {
                         .foregroundColor(.AppColors.DarkBrown)
                     
                     HStack {
-                        
                         
                         TextField("Ange summa..", text: $veckopeng)
                             .padding()
@@ -62,7 +62,6 @@ struct WeekMoneyView: View {
                             }
                         }) {
                             Text("Ok")
-//                                .font(.title3)
                                 .padding()
                                 .foregroundColor(.AppColors.DarkBrown)
                                 .background(Color.AppColors.LightGreen)
@@ -95,7 +94,6 @@ struct WeekMoneyView: View {
                 {
                     veckopeng = String(barnet.weekmoney)
                 }
-                
             }
         }.navigationViewStyle(StackNavigationViewStyle())
     }

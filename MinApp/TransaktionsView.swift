@@ -50,8 +50,3 @@ struct TransaktionsView: View {
     }
 }
 
-/*struct transaktionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        TransaktionsView(barntrans: [])
-    }
-}*/

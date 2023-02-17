@@ -18,7 +18,6 @@ struct ChildView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     
-    //    @StateObject var childViewModel = ChildViewModel()
     
     @State var summa = ""
     @State var meddelande = ""
@@ -30,7 +29,6 @@ struct ChildView: View {
     @State var barntrans = [BarnTransaktion]()
     @State var plustrans = [BarnTransaktion]()
     @State var minustrans = [BarnTransaktion]()
-    //  @Binding var weekMoney : BarnNamn
     @State var difftab = transMode.alla
     
     
@@ -80,17 +78,7 @@ struct ChildView: View {
                 
                 
                 Spacer()
-//
-//
-//                TextField("Ange summa", text: $summa)
-//                    .multilineTextAlignment(.center)
-//                    .focused($sumIsFocused)
-//
-//                TextField("Meddelande", text: $meddelande)
-//                    .multilineTextAlignment(.center)
-//                    .focused($messageIsFocused)
-                
-                
+
                 HStack {
                     
                     NavigationLink(destination: GeView(barnet: barnet)){
@@ -157,18 +145,11 @@ struct ChildView: View {
                 Button("OK", role: .cancel) { }
             }
             .onAppear() {
-                //     dateform.dateStyle = .short
-                
-                
-                
+               
                 loadtransact()
+                
             }
-            /*
-            .onTapGesture {
-                sumIsFocused = false
-                messageIsFocused = false
-            }
-             */
+            
         }.background(Color.AppColors.LightBeige)
     }
     
@@ -186,7 +167,6 @@ struct ChildView: View {
             
             if(Int32(summa)! > barnet.pengar)
             {
-                // för mycket
                 return
             }
             

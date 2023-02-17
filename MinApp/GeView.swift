@@ -25,7 +25,6 @@ struct GeView: View {
         
         VStack {
             TextField("Ange summa", text: $summa)
-               // .multilineTextAlignment(.center)
                 .padding()
                 .focused($sumIsFocused)
                 .background(Color.AppColors.OtherBeige)
@@ -33,7 +32,6 @@ struct GeView: View {
             
             TextField("Meddelande", text: $meddelande)
                 .padding()
-                //.multilineTextAlignment(.center)
                 .focused($messageIsFocused)
                 .background(Color.AppColors.OtherBeige)
                 .cornerRadius(20)
@@ -76,7 +74,7 @@ struct GeView: View {
             
             if(Int32(summa)! > barnet.pengar)
             {
-                // för mycket
+                
                 return
             }
             

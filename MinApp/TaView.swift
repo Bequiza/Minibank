@@ -27,7 +27,6 @@ struct TaView: View {
         VStack {
             
             TextField("Ange summa", text: $summa)
-               // .multilineTextAlignment(.center)
                 .padding()
                 .focused($sumIsFocused)
                 .background(Color.AppColors.OtherBeige)
@@ -35,7 +34,6 @@ struct TaView: View {
             
             TextField("Meddelande", text: $meddelande)
                 .padding()
-                //.multilineTextAlignment(.center)
                 .focused($messageIsFocused)
                 .background(Color.AppColors.OtherBeige)
                 .cornerRadius(20)
@@ -54,14 +52,8 @@ struct TaView: View {
                 }
                 sumIsFocused = false
                 messageIsFocused = false
-                // Int32(summa) = ""
                 meddelande = ""
-//                maketransaction(plus: true)
-//                sumIsFocused = false
-//                messageIsFocused = false
-//                summa = ""
-//                meddelande = ""
-//
+
                 do {
                     try viewContext.save()
                     dismiss()
